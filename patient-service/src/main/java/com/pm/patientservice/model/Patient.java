@@ -20,7 +20,7 @@ import java.util.UUID;
 public class Patient {
     @Id
     @GeneratedValue(strategy =  GenerationType.AUTO)
-    private UUID patientId;
+    private UUID id;
 
     @NotNull
     private String name;
