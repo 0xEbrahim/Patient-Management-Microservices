@@ -1,6 +1,7 @@
 package com.pm.patientservice.service;
 
 
+import com.pm.patientservice.dto.PatientRequestDTO;
 import com.pm.patientservice.dto.PatientResponseDTO;
 import com.pm.patientservice.mapper.PatientMapper;
 import com.pm.patientservice.model.Patient;
@@ -18,6 +19,12 @@ public class PatientService {
     @Autowired
     public PatientService(PatientRepository patientRepository) {
         this.patientRepository = patientRepository;
+    }
+
+    public PatientResponseDTO createPatient(PatientRequestDTO patientRequestDTO) {
+        Patient patient = patientRepository.save(PatientMapper.toEntity(patientRequestDTO));
+        System.out.println(patient.getId());
+        return PatientMapper.toDto(patient);
     }
 
     public List<PatientResponseDTO> findAll() {

@@ -1,0 +1,13 @@
+
+### Request for creatieng a patient
+POST http://localhost:5000/patients
+Content-type: application/json
+
+{
+  "name": "John Doe",
+  "email": "ebrahim@gmail.com",
+  "address": "Cairo",
+  "birthDate": "2003-02-06",
+  "registrationDate": "2014-05-01"
+}
+###
