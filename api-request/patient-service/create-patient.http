@@ -4,8 +4,8 @@ POST http://localhost:5000/patients
 Content-type: application/json
 
 {
-  "name": "John Doe, Cap",
-  "email": "ebrahim132@gmail.com",
+  "name": "John Doe, KAFKA",
+  "email": "HEMA@gmail.com",
   "address": "Cairo",
   "birthDate": "2003-02-06",
   "registrationDate": "2014-05-01"
